@@ -3,8 +3,8 @@
 import os
 
 class Config(object):
-  API_ID = int(os.environ.get("API_ID", ""))
-  API_HASH = os.environ.get("API_HASH", "")
+  API_ID = int(os.environ.get("API_ID", "25502576"))
+  API_HASH = os.environ.get("API_HASH", "f0f35dbb5b0081cdc8d3c9d5383c4628")
   BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
   BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
   DB_CHANNEL = int(os.environ.get("DB_CHANNEL", ""))
@@ -34,13 +34,9 @@ Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edi
 ╰──────[ 😎 ]───────────⍟
 """
   ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [@PredatorHackerzZ](https://github.com/PredatorHackerzZ)
- 
- I am Super noob Please Support My Hard Work.
-
-[Donate Me](https://t.me/DonateXrobot) or MrAbhi2k3@apl
-"""
+🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [@Sujan_Ch](https://t.me/Sujan_Ch)"""
+  
   HOME_TEXT = """
 Hello, [{}](tg://user?id={})\n\nThis is a Permanent FileStore Bot.
 
-Join: @GreyMatter_Bots"""
+Join: @Sujan_BotZ"""
