@@ -314,7 +314,7 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(""Owner", url="https://t.me/Sujan_Ch")
+                        InlineKeyboardButton("Owner", url="https://t.me/Sujan_Ch")
                     ],
                     [
                         InlineKeyboardButton("Go Home", callback_data="gotohome"),
