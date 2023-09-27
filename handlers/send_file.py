@@ -13,7 +13,7 @@ from handlers.helpers import str_to_b64
 async def reply_forward(message: Message, file_id: int):
     try:
         await message.reply_text(
-            f"Files will be deleted in 30 minutes to avoid copyright issues. Please forward and save them.",
+            f"<b>ꜰɪʟᴇꜱ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ 30 ᴍɪɴᴜᴛᴇꜱ ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪꜱꜱᴜᴇꜱ. ᴘʟᴇᴀꜱᴇ ꜰᴏʀᴡᴀʀᴅ ᴀɴᴅ ꜱᴀᴠᴇ ᴛʜᴇᴍ.</b>\n\n<b>❣️ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ❣️:- @FilmyHub_Adda</b>",
             disable_web_page_preview=True,
             quote=True
         )
