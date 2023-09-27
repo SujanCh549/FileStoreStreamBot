@@ -72,8 +72,8 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             f"**Batch Files Stored in my Database!**\n\nHere is the Permanent Link of your files: <code>{short_link}</code> \n\n"
             f"Just Click the link to get your files!",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Original Link", url=share_link),
-                  InlineKeyboardButton("Short Link", url=short_link)]]
+                [[InlineKeyboardButton("♻️Original Link", url=share_link),
+                  InlineKeyboardButton("🔗Short Link", url=short_link)]]
             ),
             disable_web_page_preview=True
         )
@@ -81,8 +81,8 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             chat_id=int(Config.LOG_CHANNEL),
             text=f"#BATCH_SAVE:\n\n[{editable.reply_to_message.from_user.first_name}](tg://user?id={editable.reply_to_message.from_user.id}) Got Batch Link!",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Original Link", url=short_link),
-                                                InlineKeyboardButton("Short Link", url=share_link)]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("♻️Original Link", url=short_link),
+                                                InlineKeyboardButton("🔗Short Link", url=share_link)]])
         )
     except Exception as err:
         await editable.edit(f"Something Went Wrong!\n\n**Error:** `{err}`")
@@ -112,8 +112,8 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
             f"Here is the Permanent Link of your file: <code>{short_link}</code> \n\n"
             "Just Click the link to get your file!",
             reply_markup=InlineKeyboardMarkup(
-               [[InlineKeyboardButton("Original Link", url=share_link),
-                  InlineKeyboardButton("Short Link", url=short_link)]]
+               [[InlineKeyboardButton("♻️Original Link", url=share_link),
+                  InlineKeyboardButton("🔗Short Link", url=short_link)]]
             ),
             disable_web_page_preview=True
         )
