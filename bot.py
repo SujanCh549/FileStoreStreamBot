@@ -74,7 +74,7 @@ async def start(bot: Client, cmd: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/AdultHub_Adda")
+                        InlineKeyboardButton("Updates Channel", url="https://t.me/+e294OPu0LiY4MzI1")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -348,7 +348,7 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/AdultHub_Adda")
+                        InlineKeyboardButton("Updates Channel", url="https://t.me/+e294OPu0LiY4MzI1")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -401,7 +401,7 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/AdultHub_Adda")
+                        InlineKeyboardButton("Updates Channel", url="https://t.me/+e294OPu0LiY4MzI1")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
