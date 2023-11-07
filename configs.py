@@ -37,6 +37,4 @@ Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edi
 🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [@This Person](tg://settings)"""
   
   HOME_TEXT = """
-Hello, [{}](tg://user?id={})\n\nThis is a Adult FileStore Bot.
-
-Join: @AdultHub_Adda"""
+Hello, [{}](tg://user?id={})\n\nThis is a Adult FileStore Bot."""
