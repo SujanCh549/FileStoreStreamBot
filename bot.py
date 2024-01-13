@@ -1,7 +1,7 @@
 import os
 import asyncio
 import traceback
-lazy_pic = os.environ.get("LAZY_PIC","https://telegra.ph/file/d382d2fad1fdd2a4ccca4.png")
+lazy_pic = os.environ.get("LAZY_PIC","")
 from binascii import (
     Error
 )
@@ -116,15 +116,11 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🍿supp⊕r† gr⊕up", url="https://t.me/LazyDeveloperSupport"),
-                            InlineKeyboardButton("🔊ß⊕†s chαηηεl", url="https://t.me/LazyDeveloper")
+                            InlineKeyboardButton("📯 Mᴏᴠɪᴇ Cʜᴀɴɴᴇʟ", url="https://t.me/+WVaNEJ1unlZmZDRl")
                         ],
                         [
-                            InlineKeyboardButton("🤖Aß⊕ut ß⊕†", callback_data="aboutbot"),
-                            InlineKeyboardButton("♥️Aß⊕ut Đ€V", callback_data="aboutdevs")
-                        ],
-                        [
-                            InlineKeyboardButton("⎝⎝✧✧ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ✧✧⎠⎠", url="https://youtu.be/Rtjyz3lEZwE")
+                            InlineKeyboardButton("🎛 ️Aʙᴏᴜᴛ ", callback_data="aboutbot"),
+                            InlineKeyboardButton("🧑‍💻️Aʙᴏᴜᴛ Dᴇᴠ", callback_data="aboutdevs")
                         ]]))
             else :
                 await cmd.reply_photo(photo=lazy_pic,
@@ -132,15 +128,11 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🍿supp⊕r† gr⊕up", url="https://t.me/LazyDeveloperSupport"),
-                            InlineKeyboardButton("🔊ß⊕†s chαηηεl", url="https://t.me/LazyDeveloper")
+                            InlineKeyboardButton("📯 Mᴏᴠɪᴇ Cʜᴀɴɴᴇʟ", url="https://t.me/+WVaNEJ1unlZmZDRl")
                         ],
                         [
-                            InlineKeyboardButton("🤖Aß⊕ut ß⊕†", callback_data="aboutbot"),
-                            InlineKeyboardButton("♥️Aß⊕ut Đ€V", callback_data="aboutdevs")
-                        ],
-                        [
-                            InlineKeyboardButton("⎝⎝✧✧ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ✧✧⎠⎠", url="https://youtu.be/Rtjyz3lEZwE")
+                            InlineKeyboardButton("🎛 ️Aʙᴏᴜᴛ ", callback_data="aboutbot"),
+                            InlineKeyboardButton("🧑‍💻️Aʙᴏᴜᴛ Dᴇᴠ", callback_data="aboutdevs")
                         ]]))
             
         else:
@@ -154,7 +146,7 @@ async def Lazy_start():
                 if GetMessage.text:
                     message_ids = GetMessage.text.split(" ")
                     _response_msg = await cmd.reply_text(
-                        text=f"**Total Files:** `{len(message_ids)}`",
+                        text=f"**Tᴏᴛᴀʟ Fɪʟᴇꜱ:** `{len(message_ids)}`",
                         quote=True,
                         disable_web_page_preview=True
                     )
@@ -166,7 +158,7 @@ async def Lazy_start():
 
             except Exception as err:
                 print(err)
-                await cmd.reply_text(f"ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ.!\n\n**Error:** `{err}`")
+                await cmd.reply_text(f"Sᴏᴍᴇᴛʜɪɴɢ Wᴇɴᴛ Wʀᴏɴɢ.!\n\n**Error:** `{err}`")
         
 
     @Bot.on_message((filters.document | filters.video | filters.audio) & ~filters.chat(Config.DB_CHANNEL))
@@ -182,7 +174,7 @@ async def Lazy_start():
                     return
 
             if message.from_user.id in Config.BANNED_USERS:
-                await message.reply_text("ꜱᴏʀʀʏ, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ!\n\nContact [Support Group](https://t.me/LazyDeveloperSupport)",
+                await message.reply_text("Sᴏʀʀʏ, Yᴏᴜ Aʀᴇ Bᴀɴɴᴇᴅ!\n\nContact [My Owner]](https://t.me/Sujan_Bots)",
                                         disable_web_page_preview=True)
                 return
 
@@ -192,8 +184,8 @@ async def Lazy_start():
             await message.reply_text(
                 text="ᴄʜᴏᴏꜱᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ꜰʀᴏᴍ ʙᴇʟᴏᴡ:",
                 reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton("ŞΔV€ ƗŇ βΔŦĆĦ", callback_data="addToBatchTrue")],
-                    [InlineKeyboardButton(" ̿̿ ̿̿ ̿   𝘎𝘦𝘵 𝘚𝘩𝘢𝘳𝘢𝘣𝘭𝘦 𝘓𝘪𝘯𝘬 '̿̿ ̿ ̿ ̿ ̿", callback_data="addToBatchFalse")]
+                    [InlineKeyboardButton("Sᴀᴠᴇ Iɴ Bᴀᴛᴄʜ ", callback_data="addToBatchTrue")],
+                    [InlineKeyboardButton("Gᴇᴛ Sʜᴀʀᴇᴀʙʟᴇ Lɪɴᴋ ", callback_data="addToBatchFalse")]
                 ]),
                 quote=True,
                 disable_web_page_preview=True
@@ -246,7 +238,7 @@ async def Lazy_start():
     async def sts(_, m: Message):
         total_users = await db.total_users_count()
         await m.reply_text(
-            text=f"**ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ ɪɴ ᴅʙ:** `{total_users}`",
+            text=f"**Tᴏᴛᴀʟ Uꜱᴇʀꜱ Iɴ Dʙ:** `{total_users}`",
             quote=True
         )
 
@@ -269,7 +261,7 @@ async def Lazy_start():
             user_id = int(m.command[1])
             ban_duration = int(m.command[2])
             ban_reason = ' '.join(m.command[3:])
-            ban_log_text = f"BΔnninǤ user {user_id} FФЯ {ban_duration} ᴅᴀʏꜱ ꜰᴏʀ ᴛʜᴇ ʀᴇᴀꜱᴏɴ {ban_reason}."
+            ban_log_text = f"Banning user {user_id} FФЯ {ban_duration} ᴅᴀʏꜱ ꜰᴏʀ ᴛʜᴇ ʀᴇᴀꜱᴏɴ {ban_reason}."
             try:
                 await c.send_message(
                     user_id,
@@ -375,12 +367,11 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("⚡️SФUЯCΞ CФDΞS ФF ß⊕Γ",
-                                                url="https://github.com/LazyDeveloperr/MissRozy")
+                            InlineKeyboardButton("📯 Mᴏᴠɪᴇ Cʜᴀɴɴᴇʟ", url="https://t.me/+WVaNEJ1unlZmZDRl")
                         ],
                         [
-                            InlineKeyboardButton("GФ HФMΞ", callback_data="gotohome"),
-                            InlineKeyboardButton("♥️Aß⊕ut Đ€V", callback_data="aboutdevs")
+                            InlineKeyboardButton("🎛 ️Aʙᴏᴜᴛ ", callback_data="aboutbot"),
+                            InlineKeyboardButton("🧑‍💻️Aʙᴏᴜᴛ Dᴇᴠ", callback_data="aboutdevs")
                         ]
                     ]
                 )
@@ -393,12 +384,8 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("⚡️SФUЯCΞ CФDΞS ФF ß⊕Γ",
-                                                url="https://github.com/LazyDeveloperr/MissRozy")
-                        ],
-                        [
-                            InlineKeyboardButton("🤖Aß⊕ut ß⊕t", callback_data="aboutbot"),
-                            InlineKeyboardButton("🥷GФ HФMΞ", callback_data="gotohome")
+                            InlineKeyboardButton("🎛 Aʙᴏᴜᴛ", callback_data="aboutbot"),
+                            InlineKeyboardButton("🏠 Gᴏ Hᴏᴍᴇ ", callback_data="gotohome")
                         ]
                     ]
                 )
@@ -412,15 +399,11 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🍿supp⊕r† gr⊕up", url="https://t.me/LazyDeveloperSupport"),
-                            InlineKeyboardButton("🔊ß⊕ts Channel", url="https://t.me/LazyDeveloper")
+                            InlineKeyboardButton("📯 Mᴏᴠɪᴇ Cʜᴀɴɴᴇʟ", url="https://t.me/+WVaNEJ1unlZmZDRl")
                         ],
                         [
-                            InlineKeyboardButton("🤖Aß⊕ut ß⊕t", callback_data="aboutbot"),
-                            InlineKeyboardButton("♥️Aß⊕ut Đ€V", callback_data="aboutdevs")
-                        ],
-                        [
-                            InlineKeyboardButton("⎝⎝✧✧ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ✧✧⎠⎠", url="https://youtu.be/Rtjyz3lEZwE")
+                            InlineKeyboardButton("🎛 ️Aʙᴏᴜᴛ ", callback_data="aboutbot"),
+                            InlineKeyboardButton("🧑‍💻️Aʙᴏᴜᴛ Dᴇᴠ", callback_data="aboutdevs")
                         ]
                     ]
                 )
@@ -432,15 +415,11 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🍿supp⊕r† gr⊕up", url="https://t.me/LazyDeveloperSupport"),
-                            InlineKeyboardButton("🔊ß⊕ts Channel", url="https://t.me/LazyDeveloper")
+                            InlineKeyboardButton("📯 Mᴏᴠɪᴇ Cʜᴀɴɴᴇʟ", url="https://t.me/+WVaNEJ1unlZmZDRl")
                         ],
                         [
-                            InlineKeyboardButton("🤖Aß⊕ut ß⊕t", callback_data="aboutbot"),
-                            InlineKeyboardButton("♥️Aß⊕ut Đ€V", callback_data="aboutdevs")
-                        ],
-                        [
-                            InlineKeyboardButton("⎝⎝✧✧ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ✧✧⎠⎠", url="https://youtu.be/Rtjyz3lEZwE")
+                            InlineKeyboardButton("🎛 ️Aʙᴏᴜᴛ ", callback_data="aboutbot"),
+                            InlineKeyboardButton("🧑‍💻️Aʙᴏᴜᴛ Dᴇᴠ", callback_data="aboutdevs")
                         ]
                     ]
                 )
@@ -456,7 +435,7 @@ async def Lazy_start():
                     user = await bot.get_chat_member(channel_chat_id, cmd.message.chat.id)
                     if user.status == "kicked":
                         await cmd.message.edit(
-                            text="ꜱᴏʀʀʏ ꜱɪʀ, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜꜱᴇ ᴍᴇ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [Support Group](https://t.me/LazyDeveloperSupport).",
+                            text="ꜱᴏʀʀʏ ꜱɪʀ, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛᴏ ᴜꜱᴇ ᴍᴇ. ᴄᴏɴᴛᴀᴄᴛ [ᴍʏ ᴏᴡɴᴇʀ](https://t.me/Sujan_Bots).",
                             disable_web_page_preview=True
                         )
                         return
@@ -468,10 +447,10 @@ async def Lazy_start():
                         reply_markup=InlineKeyboardMarkup(
                             [
                                 [
-                                    InlineKeyboardButton("▌│ 𝙅𝙤𝙞𝙣 𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 ║║", url=invite_link.invite_link)
+                                    InlineKeyboardButton("📯 𝐉𝐨𝐢𝐧 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📯", url=invite_link.invite_link)
                                 ],
                                 [
-                                    InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
+                                    InlineKeyboardButton("🔄 𝐑𝐞𝐟𝐫𝐞𝐬𝐡 🔄", callback_data="refreshmeh")
                                 ]
                             ]
                         )
@@ -479,7 +458,7 @@ async def Lazy_start():
                     return
                 except Exception:
                     await cmd.message.edit(
-                        text="ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [Support Group](https://t.me/LazyDeveloperSupport).",
+                        text="ꜱᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ. ᴄᴏɴᴛᴀᴄᴛ ᴍʏ [ᴍʏ ᴏᴡɴᴇʀ](https://t.me/Sujan_Bots).",
                         disable_web_page_preview=True
                     )
                     return
@@ -490,15 +469,11 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🍿supp⊕r† gr⊕up", url="https://t.me/LazyDeveloperSupport"),
-                            InlineKeyboardButton("🔊ß⊕ts Channel", url="https://t.me/LazyDeveloper")
+                            InlineKeyboardButton("📯 Mᴏᴠɪᴇ Cʜᴀɴɴᴇʟ", url="https://t.me/+WVaNEJ1unlZmZDRl")
                         ],
                         [
-                            InlineKeyboardButton("🤖Aß⊕ut ß⊕t", callback_data="aboutbot"),
-                            InlineKeyboardButton("♥️Aß⊕ut Đ€V", callback_data="aboutdevs")
-                        ],
-                        [
-                            InlineKeyboardButton("⎝⎝✧✧ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ✧✧⎠⎠", url="https://youtu.be/Rtjyz3lEZwE")
+                            InlineKeyboardButton("🎛 ️Aʙᴏᴜᴛ ", callback_data="aboutbot"),
+                            InlineKeyboardButton("🧑‍💻️Aʙᴏᴜᴛ Dᴇᴠ", callback_data="aboutdevs")
                         ]
                     ]
                 )
@@ -510,15 +485,11 @@ async def Lazy_start():
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🍿supp⊕r† gr⊕up", url="https://t.me/LazyDeveloperSupport"),
-                            InlineKeyboardButton("🔊ß⊕ts Channel", url="https://t.me/LazyDeveloper")
+                            InlineKeyboardButton("📯 Mᴏᴠɪᴇ Cʜᴀɴɴᴇʟ", url="https://t.me/+WVaNEJ1unlZmZDRl")
                         ],
                         [
-                            InlineKeyboardButton("🤖Aß⊕ut ß⊕t", callback_data="aboutbot"),
-                            InlineKeyboardButton("♥️Aß⊕ut Đ€V", callback_data="aboutdevs")
-                        ],
-                        [
-                            InlineKeyboardButton("⎝⎝✧✧ ᴡᴀᴛᴄʜ ᴛᴜᴛᴏʀɪᴀʟ ✧✧⎠⎠", url="https://youtu.be/Rtjyz3lEZwE")
+                            InlineKeyboardButton("🎛 ️Aʙᴏᴜᴛ ", callback_data="aboutbot"),
+                            InlineKeyboardButton("🧑‍💻️Aʙᴏᴜᴛ Dᴇᴠ", callback_data="aboutdevs")
                         ]
                     ]
                 )
@@ -556,18 +527,18 @@ async def Lazy_start():
                 await xo.delete()
 
                 await lazy_file.reply_text(
-                    text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
+                    text=f"•• Lɪɴᴋ Gᴇɴᴇʀᴀᴛᴇᴅ Fᴏʀ Iᴅ #{user_id} \n•• Uꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• Fɪʟᴇ Nᴀᴍᴇ  : {fileName}",
                     quote=True,
                     disable_web_page_preview=True,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Fast Download", url=lazy_download),  # we download Link
-                                                        InlineKeyboardButton('▶Stream online', url=lazy_stream)]])  # web stream Link
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ", url=lazy_download),  # we download Link
+                                                        InlineKeyboardButton('🖥️ Wᴀᴛᴄʜ Oɴʟɪɴᴇ', url=lazy_stream)]])  # web stream Link
                 )
                 await cmd.message.edit(
-                    text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
+                    text="•• Lɪɴᴋ Gᴇɴᴇʀᴀᴛᴇᴅ 😎",
                     quote=True,
                     disable_web_page_preview=True,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Fast Download", url=lazy_download),  # we download Link
-                                                        InlineKeyboardButton('▶Stream online', url=lazy_stream)]])  # web stream Link
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ", url=lazy_download),  # we download Link
+                                                        InlineKeyboardButton('🖥️ Wᴀᴛᴄʜ Oɴʟɪɴᴇ', url=lazy_stream)]])  # web stream Link
                 )
             except Exception as e:
                 print(e)  # print the error message
@@ -583,8 +554,8 @@ async def Lazy_start():
             await cmd.message.edit("ꜰɪʟᴇ ꜱᴀᴠᴇᴅ ɪɴ ʙᴀᴛᴄʜ!\n\n"
                                 "ᴘʀᴇꜱꜱ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʙᴀᴛᴄʜ ʟɪɴᴋ.",
                                 reply_markup=InlineKeyboardMarkup([
-                                    [InlineKeyboardButton("⚡️ ɢᴇᴛ ʙᴀᴛᴄʜ & ᴘᴏꜱᴛ ⚡️", callback_data="getBatchLink")],
-                                    [InlineKeyboardButton("Close Message", callback_data="closeMessage")]
+                                    [InlineKeyboardButton("⚡️ Gᴇᴛ Bᴀᴛᴄʜ Lɪɴᴋ ⚡️", callback_data="getBatchLink")],
+                                    [InlineKeyboardButton("🚪 Cʟᴏꜱᴇ Mᴇꜱꜱᴀɢᴇ", callback_data="closeMessage")]
                                 ]))
 
         elif "addToBatchFalse" in cb_data:
@@ -593,9 +564,9 @@ async def Lazy_start():
         elif "getBatchLink" in cb_data:
             message_ids = MediaList.get(f"{str(cmd.from_user.id)}", None)
             if message_ids is None:
-                await cmd.answer("ʙᴀᴛᴄʜ ʟɪꜱᴛ ᴇᴍᴘᴛʏ!", show_alert=True)
+                await cmd.answer("Bᴀᴛᴄʜ Lɪꜱᴛ Eᴍᴘᴛʏ!", show_alert=True)
                 return
-            await cmd.message.edit("ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ, ɢᴇɴᴇʀᴀᴛɪɴɢ ʙᴀᴛᴄʜ ʟɪɴᴋ...")
+            await cmd.message.edit("Pʟᴇᴀꜱᴇ Wᴀɪᴛ, Gᴇɴᴇʀᴀᴛɪɴɢ Bᴀᴛᴄʜ Lɪɴᴋ...")
             await save_batch_media_in_channel(bot=bot, editable=cmd.message, message_ids=message_ids)
             MediaList[f"{str(cmd.from_user.id)}"] = []
 
