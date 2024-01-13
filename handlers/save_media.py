@@ -94,19 +94,19 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             main_channel_username = (Config.LP_BTN_MAIN_CH_USRNM)
             main_btn_link = f"https://telegram.me/{main_channel_username}"
             file_name = message.caption
-            caption_z = f"{file_name}\n\n༺ᴊᴏɪɴ @{lazypost_channel_username} ༻\n\n🦋・‥☆𝘼𝘿𝙈𝙞𝙉 𝙨𝙪𝙥𝙥𝙤𝙧𝙩☆‥・🦋\n╰┈➤・☆ @{lazypost_ch_admin_usrnm} \n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/LazyDeveloper'>⎝⎝✧ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠</a>"
-            caption_za = f"{file_name}\n\n༺ᴊᴏɪɴ @{lazypost_channel_username} ༻\n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/LazyDeveloper'>⎝⎝✧ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠</a>"
+            caption_z = f"{file_name}\n\n༺ᴊᴏɪɴ @{lazypost_channel_username} ༻\n\n🦋・‥☆𝘼𝘿𝙈𝙞𝙉 𝙨𝙪𝙥𝙥𝙤𝙧𝙩☆‥・🦋\n╰┈➤・☆ @{lazypost_ch_admin_usrnm} \n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/Sujan_BotZ'>✧ꜱᴜᴊᴀɴ_ʙᴏᴛꜱ✧</a>"
+            caption_za = f"{file_name}\n\n༺ᴊᴏɪɴ @{lazypost_channel_username} ༻\n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/Sujan_BotZ'>✧ꜱᴜᴊᴀɴ_ʙᴏᴛꜱ✧</a>"
             caption_zab = f"{file_name}\n\n🦋・‥☆𝘼𝘿𝙈𝙞𝙉 𝙨𝙪𝙥𝙥𝙤𝙧𝙩☆‥・🦋\n╰┈➤・☆ @{lazypost_ch_admin_usrnm} \n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/LazyDeveloper'>⎝⎝✧ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠</a>"
-            caption_zabi = f"{file_name}\n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/LazyDeveloper'>⎝⎝✧ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠</a>"
-            lazy_dev = f"+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/LazyDeveloper'>⎝⎝✧ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠</a>"
+            caption_zabi = f"{file_name}\n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/Sujan_BotZ'>✧ꜱᴜᴊᴀɴ_ʙᴏᴛꜱ✧</a>"
+            lazy_dev = f"+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/Sujan_BotZ'>✧ꜱᴜᴊᴀɴ_ʙᴏᴛꜱ✧</a>"
             lazypost_custom_template = f"{(Config.LP_CUSTOM_TEMPLATE)}\n\n{lazy_dev} ♥️"
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("⎝⎝✧ Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ ✧⎠⎠", url=share_link)],
+                [[InlineKeyboardButton("★ Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ ★", url=share_link)],
                  [InlineKeyboardButton("⚡️✧ Gᴇᴛ Bᴀᴛᴄʜ Fɪʟᴇꜱ ✧⚡️", url=share_link)],
                 ]
             )
             main_btn=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("⎝⎝✧ Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ ✧⎠⎠", url=share_link)],
+                [[InlineKeyboardButton("★ Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ ★", url=share_link)],
                  [InlineKeyboardButton("⚡️✧ Gᴇᴛ Bᴀᴛᴄʜ Fɪʟᴇꜱ ✧⚡️", url=share_link)]
                 ]
             )
@@ -179,21 +179,18 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
             main_channel_username = (Config.LP_BTN_MAIN_CH_USRNM)
             main_btn_link = f"https://telegram.me/{main_channel_username}"
             file_name = message.caption
-            caption_z = f"{file_name}\n\n༺ᴊᴏɪɴ @{lazypost_channel_username} ༻\n\n🦋・‥☆𝘼𝘿𝙈𝙞𝙉 𝙨𝙪𝙥𝙥𝙤𝙧𝙩☆‥・🦋\n╰┈➤・☆ @{lazypost_ch_admin_usrnm} \n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/LazyDeveloper'>⎝⎝✧ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠</a>"
-            caption_za = f"{file_name}\n\n༺ᴊᴏɪɴ @{lazypost_channel_username} ༻\n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/LazyDeveloper'>⎝⎝✧ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠</a>"
-            caption_zab = f"{file_name}\n\n🦋・‥☆𝘼𝘿𝙈𝙞𝙉 𝙨𝙪𝙥𝙥𝙤𝙧𝙩☆‥・🦋\n╰┈➤・☆ @{lazypost_ch_admin_usrnm} \n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/LazyDeveloper'>⎝⎝✧ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠</a>"
-            caption_zabi = f"{file_name}\n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/LazyDeveloper'>⎝⎝✧ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠</a>"
-            lazy_dev = f"+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/LazyDeveloper'>⎝⎝✧ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ✧⎠⎠</a>"
+            caption_z = f"{file_name}\n\n༺ᴊᴏɪɴ @{lazypost_channel_username} ༻\n\n🦋・‥☆𝘼𝘿𝙈𝙞𝙉 𝙨𝙪𝙥𝙥𝙤𝙧𝙩☆‥・🦋\n╰┈➤・☆ @{lazypost_ch_admin_usrnm} \n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/Sujan_BotZ'>✧ꜱᴜᴊᴀɴ_ʙᴏᴛꜱ✧</a>"
+            caption_za = f"{file_name}\n\n༺ᴊᴏɪɴ @{lazypost_channel_username} ༻\n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/Sujan_BotZ'>✧ꜱᴜᴊᴀɴ_ʙᴏᴛꜱ✧</a>"
+            caption_zab = f"{file_name}\n\n🦋・‥☆𝘼𝘿𝙈𝙞𝙉 𝙨𝙪𝙥𝙥𝙤𝙧𝙩☆‥・🦋\n╰┈➤・☆ @{lazypost_ch_admin_usrnm} \n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/Sujan_BotZ'>✧ꜱᴜᴊᴀɴ_ʙᴏᴛꜱ✧</a>"
+            caption_zabi = f"{file_name}\n\n+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/Sujan_BotZ'>✧ꜱᴜᴊᴀɴ_ʙᴏᴛꜱ✧</a>"
+            lazy_dev = f"+> ᴛʜᴀɴᴋ ʏᴏᴜ <a href='https://telegram.me/Sujan_BotZ'>✧ꜱᴜᴊᴀɴ_ʙᴏᴛꜱ✧</a>"
             lazypost_custom_template = f"{(Config.LP_CUSTOM_TEMPLATE)}\n\n{lazy_dev} ♥️"
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("⎝⎝✧ Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ ✧⎠⎠", url=share_link)],
-                 [InlineKeyboardButton("ミ★ GΞΓ FILΞ ★彡", url=share_link)],
+                [[InlineKeyboardButton("★ Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ ★", url=share_link)]
                 ]
             )
             main_btn=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("⎝⎝✧ Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ ✧⎠⎠", url=share_link)],
-                 [InlineKeyboardButton("ミ★ GΞΓ FILΞ ★彡", url=share_link)],
-                 [InlineKeyboardButton("•⊹٭𝚓𝚘𝚒𝚗 𝚖𝚊𝚒𝚗 𝚌𝚑𝚊𝚗𝚗𝚎𝚕٭⊹•", url=main_btn_link)]
+                [[InlineKeyboardButton("★ Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ ★", url=share_link)]
                 ]
             )
             # ✧ Here is the condition for sending POST in movie channel ✧ LazyDeveloper ✧
