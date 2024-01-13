@@ -1,5 +1,3 @@
-# (c) Mr. Vishal & @AbirHasan2005 @PredatorHackerzZ
-
 import datetime
 from configs import Config
 from handlers.database import Database
@@ -13,7 +11,7 @@ async def handle_user_status(bot, cmd):
         await db.add_user(chat_id)
         await bot.send_message(
             Config.LOG_CHANNEL,
-            f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) started @{Config.BOT_USERNAME} !!"
+            f"#NEW_USER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) Started @{Config.BOT_USERNAME} !!"
         )
 
     ban_status = await db.get_ban_status(chat_id)
