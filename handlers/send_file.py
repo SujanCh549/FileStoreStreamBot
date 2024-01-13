@@ -1,19 +1,21 @@
-# Updated By @MrAbhi2k3
-
 import asyncio
 import requests
 import string
 import random
 from configs import Config
+from configs import *
 from pyrogram import Client
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 from handlers.helpers import str_to_b64
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from urllib.parse import quote_plus
+from util.file_properties import get_name, get_hash, get_media_file_size
 
 async def reply_forward(message: Message, file_id: int):
     try:
         await message.reply_text(
-            f"ꜰɪʟᴇꜱ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪɴ 30 ᴍɪɴᴜᴛᴇꜱ ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪꜱꜱᴜᴇꜱ. ᴘʟᴇᴀꜱᴇ ꜰᴏʀᴡᴀʀᴅ ᴀɴᴅ ꜱᴀᴠᴇ ᴛʜᴇᴍ.",
+            f"Fɪʟᴇꜱ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Aɴʏ Tɪᴍᴇ. Sᴏ Pʟᴇᴀꜱᴇ Fᴏʀᴡᴀʀᴅ Aɴʏ Wʜᴇʀᴇ Tᴏ Sᴀᴠᴇ Tʜᴇᴍ.\n\nHᴇʀᴇ Iꜱ Sʜᴀʀᴀʙʟᴇ Lɪɴᴋ Oꜰ Tʜɪꜱ Fɪʟᴇ.",
             disable_web_page_preview=True,
             quote=True
         )
