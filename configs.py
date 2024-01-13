@@ -60,12 +60,11 @@ class Config(object):
   OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
   AUTO_DELETE_TIME = int(os.environ.get('AUTO_DELETE_TIME', 20))
   ABOUT_BOT_TEXT = f"""
-This is a Adult FileStore Bot. 
-Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edit Permission, I will add save Uploaded File in Channel and Share a Shareable Link. 
+Tʜɪꜱ Iꜱ Aɴ Pᴇʀᴍᴀɴᴇɴᴛ Fɪʟᴇ Sᴛᴏʀᴇ Bᴏᴛ. Sᴇɴᴅ Mᴇ Aɴʏ Vɪᴅᴇᴏ Oʀ Fɪʟᴇ I Wɪʟʟ Gɪᴠᴇ Yᴏᴜ A Sʜᴀʀᴇᴀʙʟᴇ Lɪɴᴋ.
 
 ╭────[ 🔅FɪʟᴇSᴛᴏʀᴇBᴏᴛ🔅]────⍟
 │
-├🔸 My Name: [Adult Bot](https://t.me/{BOT_USERNAME})
+├🔸 My Name: [Fɪʟᴇ Sᴛᴏʀᴇ Bᴏᴛ](https://t.me/{BOT_USERNAME})
 │
 ├🔸 Language: [Python 3](https://www.python.org)
 │
@@ -74,21 +73,21 @@ Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edi
 ╰──────[ 😎 ]───────────⍟
 """
   ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [@This Person](tg://settings)"""
+🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [Tʜɪꜱ Pᴇʀꜱᴏɴ ](tg://settings)"""
 
   LAZY_HOME_TEXT = """
-HΞУ, [{}](tg://user?id={})\n\nɪ'ᴍ ᴀ ᴘᴇʀᴍᴀɴᴇɴᴛ **ꜰɪʟᴇ ꜱᴛᴏʀᴇ ʙᴏᴛ**.
+Hᴇʏ, [{}](tg://user?id={})\n\nI'ᴍ A Pᴇʀᴍᴀɴᴇɴᴛ **Fɪʟᴇ Sᴛᴏʀᴇ Bᴏᴛ**.
 
-ミ★ 𝘚𝘦𝘯𝘥 𝘮𝘦 𝘢𝘯𝘺 𝘧𝘪𝘭𝘦 𝘐 𝘸𝘪𝘭𝘭 𝘨𝘪𝘷𝘦 𝘺𝘰𝘶 𝘢 𝘱𝘦𝘳𝘮𝘢𝘯𝘦𝘯𝘵 𝘚𝘩𝘢𝘳𝘢𝘣𝘭𝘦 𝘓𝘪𝘯𝘬. 𝘐 𝘚𝘶𝘱𝘱𝘰𝘳𝘵 𝘊𝘩𝘢𝘯𝘯𝘦𝘭 𝘈𝘭𝘴𝘰! 𝘊𝘩𝘦𝘤𝘬 **A͢b͢o͢u͢t͢ B͢o͢t͢**  𝘉𝘶𝘵𝘵𝘰𝘯 .
+★ Sᴇɴᴅ Mᴇ Aɴʏ Fɪʟᴇ I Wɪʟʟ Gɪᴠᴇ Yᴏᴜ Pᴇʀᴍᴀɴᴇɴᴛ Sʜᴀʀᴇᴀʙʟᴇ Lɪɴᴋ.
 
-«[⚡️𝙇𝙖𝙯𝙮 𝙢𝙤𝙙𝙚 𝙨𝙩𝙖𝙩𝙪𝙨 : 𝘈𝘊𝘛𝘐𝘝𝘈𝘛𝘌𝘋✅]»
- 🥷 𝘕𝘰𝘸 𝘌𝘷𝘦𝘳𝘺𝘵𝘩𝘪𝘯𝘨 𝘪𝘴 𝘶𝘱𝘰𝘯 𝘮𝘦 🥷
+«[⚡️𝗔𝘂𝘁𝗼 𝗠𝗼𝗱𝗲 𝗦𝘁𝗮𝘁𝘂𝘀 : 𝐄𝐧𝐚𝐛𝐥𝐞𝐝 ✅]»
+ 🥷 Nᴏᴡ Eᴠᴇʀʏᴛʜɪɴɢ Uᴘᴏɴ Mᴇ 🥷
 """
   HOME_TEXT = """
-HΞУ, [{}](tg://user?id={})\n\nɪ'ᴍ ᴀ ᴘᴇʀᴍᴀɴᴇɴᴛ **ꜰɪʟᴇ ꜱᴛᴏʀᴇ ʙᴏᴛ**.
+Hᴇʏ, [{}](tg://user?id={})\n\nI'ᴍ A Pᴇʀᴍᴀɴᴇɴᴛ **Fɪʟᴇ Sᴛᴏʀᴇ Bᴏᴛ**.
 
-ミ★ 𝘚𝘦𝘯𝘥 𝘮𝘦 𝘢𝘯𝘺 𝘧𝘪𝘭𝘦 𝘐 𝘸𝘪𝘭𝘭 𝘨𝘪𝘷𝘦 𝘺𝘰𝘶 𝘢 𝘱𝘦𝘳𝘮𝘢𝘯𝘦𝘯𝘵 𝘚𝘩𝘢𝘳𝘢𝘣𝘭𝘦 𝘓𝘪𝘯𝘬. 𝘐 𝘚𝘶𝘱𝘱𝘰𝘳𝘵 𝘊𝘩𝘢𝘯𝘯𝘦𝘭 𝘈𝘭𝘴𝘰! 𝘊𝘩𝘦𝘤𝘬 **A͢b͢o͢u͢t͢ B͢o͢t͢**  𝘉𝘶𝘵𝘵𝘰𝘯 .
+★ Sᴇɴᴅ Mᴇ Aɴʏ Fɪʟᴇ I Wɪʟʟ Gɪᴠᴇ Yᴏᴜ Pᴇʀᴍᴀɴᴇɴᴛ Sʜᴀʀᴇᴀʙʟᴇ Lɪɴᴋ.
 
-«[⚡️𝙇𝙖𝙯𝙮 𝙢𝙤𝙙𝙚 𝙨𝙩𝙖𝙩𝙪𝙨 : 𝘋𝘐𝘚𝘈𝘉𝘓𝘌𝘋💢]»
- 😏𝙣𝙤𝙬 𝙞𝙩𝙨 𝙖𝙡𝙡 𝙪𝙥𝙤𝙣 𝙪 𝙗𝙖𝙗𝙮👍
+«[⚡️𝗔𝘂𝘁𝗼 𝗠𝗼𝗱𝗲 𝗦𝘁𝗮𝘁𝘂𝘀 : 𝐃𝐢𝐬𝐚𝐛𝐥𝐞𝐝 💢]»
+ 😏 Nᴏᴡ Eᴠᴇʀʏᴛʜɪɴɢ Uᴘᴏɴ Yᴏᴜ 😏
 """
