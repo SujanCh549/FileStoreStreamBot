@@ -1,5 +1,3 @@
-# (c) @AbirHasan2005 | @PredatorHackerzZ
-
 import asyncio
 import requests
 import string
@@ -85,7 +83,8 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
                                                 InlineKeyboardButton("🔗Short Link", url=share_link)]])
         )
 
-    if(Config.LAZY_MODE == True):
+        if (Config.LAZY_MODE == True):
+
             thumbs= message.video.thumbs[0]
             file_id= thumbs.file_id
             lazy_channel = int(Config.LAZY_CHANNEL)
@@ -171,7 +170,7 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
             disable_web_page_preview=True
         )
 
-if(Config.LAZY_MODE == True):
+        if(Config.LAZY_MODE == True):
             thumbs= message.video.thumbs[0]
             file_id= thumbs.file_id
             lazy_channel = int(Config.LAZY_CHANNEL)
@@ -253,3 +252,4 @@ if(Config.LAZY_MODE == True):
                 ]
             )
         )
+        
