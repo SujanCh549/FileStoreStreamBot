@@ -170,7 +170,7 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
             disable_web_page_preview=True
         )
 
-        if(Config.LAZY_MODE == True):
+        if (Config.LAZY_MODE == True):
             thumbs= message.video.thumbs[0]
             file_id= thumbs.file_id
             lazy_channel = int(Config.LAZY_CHANNEL)
