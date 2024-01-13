@@ -1,7 +1,7 @@
 import os
 import asyncio
 import traceback
-lazy_pic = os.environ.get("LAZY_PIC","")
+lazy_pic = os.environ.get("LAZY_PIC","https://graph.org/file/8515052bfcd8461b7dcfd.jpg")
 from binascii import (
     Error
 )
