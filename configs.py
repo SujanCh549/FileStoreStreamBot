@@ -50,7 +50,7 @@ class Config(object):
   BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
   LAZY_CHANNEL = int(os.environ.get('LAZY_CHANNEL', '0'))
   LAZY_MODE = bool(os.environ.get("LAZY_MODE", "False"))
-  LAZY_PIC = os.environ.get("LAZY_PIC","https://telegra.ph/file/d382d2fad1fdd2a4ccca4.png")
+  LAZY_PIC = os.environ.get("LAZY_PIC","https://graph.org/file/8515052bfcd8461b7dcfd.jpg")
   LP_BTN_MAIN_CH_USRNM = os.environ.get("LP_BTN_MAIN_CH_USRNM")
   LP_CHANNEL_USRNM = os.environ.get("LP_CHANNEL_USRNM")
   LPCH_ADMIN_USRMN = os.environ.get("LPCH_ADMIN_USRMN")
