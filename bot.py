@@ -541,18 +541,18 @@ async def button(bot: Client, cmd: CallbackQuery):
     except QueryIdInvalid: pass
 
 if ON_HEROKU:
-        asyncio.create_task(ping_server())
-    me = await Bot.get_me()
-    Bot.username = '@' + me.username
-    app = web.AppRunner(await web_server())
-    await app.setup()
-    bind_address = "0.0.0.0" if ON_HEROKU else BIND_ADRESS
-    await web.TCPSite(app, bind_address, PORT).start()
-    await idle()
+    asyncio.create_task(ping_server())
 
+me = await Bot.get_me()
+Bot.username = '@' + me.username
+app = web.AppRunner(await web_server())
+await app.setup()
+bind_address = "0.0.0.0" if ON_HEROKU else BIND_ADRESS
+await web.TCPSite(app, bind_address, PORT).start()
+await idle()
 
 if __name__ == '__main__':
     try:
         loop.run_until_complete(Lazy_start())
     except KeyboardInterrupt:
-        logging.info(' Service Stopped ')
+        logging.info('Service Stopped')
