@@ -1,8 +1,7 @@
-# (c) @TeleRoidGroup || @PredatorHackerzZ
-
 import os
 import asyncio
 import traceback
+lazy_pic = os.environ.get("LAZY_PIC","")
 from binascii import (
     Error
 )
@@ -23,6 +22,7 @@ from pyrogram.types import (
     Message
 )
 from configs import Config
+from configs import *
 from handlers.database import db
 from handlers.add_user_to_db import add_user_to_database
 from handlers.send_file import send_media_and_reply
@@ -32,11 +32,41 @@ from handlers.force_sub_handler import (
     handle_force_sub,
     get_invite_link
 )
+import logging
+import logging.config
+logging.config.fileConfig('logging.conf')
+logging.getLogger().setLevel(logging.INFO)
+logging.getLogger("pyrogram").setLevel(logging.ERROR)
+logging.getLogger("imdbpy").setLevel(logging.ERROR)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logging.getLogger("aiohttp").setLevel(logging.ERROR)
+logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
+
 from handlers.broadcast_handlers import main_broadcast_handler
 from handlers.save_media import (
     save_media_in_channel,
     save_batch_media_in_channel
 )
+from util.human_readable import humanbytes
+from urllib.parse import quote_plus
+from util.file_properties import get_name, get_hash, get_media_file_size
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.ERROR)
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from handlers.send_file import media_forward
+from pyrogram import idle
+from lazybot import Bot
+from util.keepalive import ping_server
+from lazybot.clients import initialize_clients
+from aiohttp import web
+from handlers import web_server
+from pyrogram import Client, __version__
+from handlers.helpers import  decode, get_messages
+from pyrogram.enums import ParseMode
+import sys
 
 MediaList = {}
 
@@ -48,6 +78,23 @@ Bot = Client(
     api_hash=Config.API_HASH
 )
 
+async def Lazy_start():
+    print('\n')
+    print(' Initalizing clients ')
+    await initialize_clients()
+    try:
+        db_channel = await Bot.get_chat(Config.DB_CHANNEL)
+        Bot.db_channel = db_channel
+        test = await Bot.send_message(chat_id=db_channel.id, text="TEST")
+        await test.delete()
+        print("Bot is admin in db channel")
+
+    except Exception as e:
+        # Handle the exception, log it, and optionally take other actions
+        print(e)  # Print the error for debugging
+        print(f"Make Sure bot is Admin in DB Channel, and Double check the CHANNEL_ID Value, Current Value {CHANNEL_ID}")
+        print("\nBot Stopped bYE")
+        sys.exit()
 
 @Bot.on_message(filters.private)
 async def _(bot: Client, cmd: Message):
@@ -58,7 +105,7 @@ async def _(bot: Client, cmd: Message):
 async def start(bot: Client, cmd: Message):
 
     if cmd.from_user.id in Config.BANNED_USERS:
-        await cmd.reply_text("Sorry, You are banned.")
+        await cmd.reply_text("Sorry, You Are Banned.")
         return
     if Config.UPDATES_CHANNEL is not None:
         back = await handle_force_sub(bot, cmd)
@@ -425,6 +472,43 @@ async def button(bot: Client, cmd: CallbackQuery):
         except Exception as e:
             await cmd.answer(f"Can't Ban Him!\n\nError: {e}", show_alert=True)
 
+    elif cb_data.startswith("generate_stream_link"):
+            _, file_id = cb_data.split(":")
+            try:
+                user_id = cmd.from_user.id
+                username =  cmd.from_user.mention
+
+                lazy_file = await media_forward(bot, user_id=STREAM_LOGS, file_id=file_id)
+ 
+                
+                fileName = {quote_plus(get_name(lazy_file))}
+                lazy_stream = f"{URL}watch/{str(lazy_file.id)}/{quote_plus(get_name(lazy_file))}?hash={get_hash(lazy_file)}"
+                lazy_download = f"{URL}{str(lazy_file.id)}/{quote_plus(get_name(lazy_file))}?hash={get_hash(lazy_file)}"
+
+                xo = await cmd.message.reply_text(f'🔐')
+                await asyncio.sleep(1)
+                await xo.delete()
+
+                await lazy_file.reply_text(
+                    text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
+                    quote=True,
+                    disable_web_page_preview=True,
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Fast Download", url=lazy_download),  # we download Link
+                                                        InlineKeyboardButton('▶Stream online', url=lazy_stream)]])  # web stream Link
+                )
+                await cmd.message.edit(
+                    text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
+                    quote=True,
+                    disable_web_page_preview=True,
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Fast Download", url=lazy_download),  # we download Link
+                                                        InlineKeyboardButton('▶Stream online', url=lazy_stream)]])  # web stream Link
+                )
+            except Exception as e:
+                print(e)  # print the error message
+                await cmd.answer(f"☣something went wrong sweetheart\n\n{e}", show_alert=True)
+                return
+
+    
     elif "addToBatchTrue" in cb_data:
         if MediaList.get(f"{str(cmd.from_user.id)}", None) is None:
             MediaList[f"{str(cmd.from_user.id)}"] = []
@@ -456,5 +540,19 @@ async def button(bot: Client, cmd: CallbackQuery):
         await cmd.answer()
     except QueryIdInvalid: pass
 
+if ON_HEROKU:
+        asyncio.create_task(ping_server())
+    me = await Bot.get_me()
+    Bot.username = '@' + me.username
+    app = web.AppRunner(await web_server())
+    await app.setup()
+    bind_address = "0.0.0.0" if ON_HEROKU else BIND_ADRESS
+    await web.TCPSite(app, bind_address, PORT).start()
+    await idle()
 
-Bot.run()
+
+if __name__ == '__main__':
+    try:
+        loop.run_until_complete(Lazy_start())
+    except KeyboardInterrupt:
+        logging.info(' Service Stopped ')
