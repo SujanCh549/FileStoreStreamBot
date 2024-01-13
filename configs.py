@@ -17,9 +17,9 @@ URL = "https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
     "http://{}:{}/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
-SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
+SESSION_NAME = str(environ.get('SESSION_NAME', 'FileStoreStreamBot'))
 MULTI_CLIENT = False
-name = str(environ.get('name', 'LazyPrincess'))
+name = str(environ.get('name', 'FileStoreStreamBot'))
 PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
 DISABLE_CHANNEL_BUTTON = bool(environ.get('DISABLE_CHANNEL_BUTTON', False))
 HAS_SSL=bool(getenv('HAS_SSL',False))
@@ -29,7 +29,7 @@ else:
     URL = "http://{}/".format(FQDN)
 UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', None))
 BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001987654567")).split())) 
-STREAM_LOGS = environ.get('STREAM_LOGS','-1002114664669')
+STREAM_LOGS = environ.get('STREAM_LOGS','-1002082325170')
 SESSION = environ.get('SESSION','MissRozy')
 CUSTOM_CAPTION = environ.get('CUSTOM_CAPTION')
 
@@ -38,7 +38,7 @@ class Config(object):
   API_HASH = os.environ.get("API_HASH", "948daec2dc8c979ceb0e4e5746cdd994")
   BOT_TOKEN = os.environ.get("BOT_TOKEN", "6283978460:AAFdIjuLYF6hAeVRLNGhKi_9c5b2nU6QS2Q")
   BOT_USERNAME = os.environ.get("BOT_USERNAME", "Shortener_File2Link_Bot")
-  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002114664669"))
+  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002082325170"))
   SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "vnshortener.com")
   SHORTLINK_API = os.environ.get('SHORTLINK_API', "6c5db31980885e46221e90106f1d47b8295aa0f8")
   BOT_OWNER = int(os.environ.get("BOT_OWNER", "5123039648"))
