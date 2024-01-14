@@ -38,7 +38,7 @@ class Config(object):
   API_HASH = os.environ.get("API_HASH", "948daec2dc8c979ceb0e4e5746cdd994")
   BOT_TOKEN = os.environ.get("BOT_TOKEN", "6685371605:AAF_qQI9DIpg8GF7lcX6cjPElkdG0TW0L6k")
   BOT_USERNAME = os.environ.get("BOT_USERNAME", "H_G_R_A_Bot")
-  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002101175853"))
+  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001813638350"))
   SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "vnshortener.com")
   SHORTLINK_API = os.environ.get('SHORTLINK_API', "6c5db31980885e46221e90106f1d47b8295aa0f8")
   BOT_OWNER = int(os.environ.get("BOT_OWNER", "5123039648"))
