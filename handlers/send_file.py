@@ -16,8 +16,7 @@ async def reply_forward(message: Message, file_id: int):
 
     try:
         await message.reply_text(
-            f"**Fɪʟᴇꜱ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Aɴʏ Tɪᴍᴇ. Sᴏ Pʟᴇᴀꜱᴇ Fᴏʀᴡᴀʀᴅ Aɴʏ Wʜᴇʀᴇ Tᴏ Sᴀᴠᴇ Tʜᴇᴍ.\n\nHᴇʀᴇ Iꜱ Sʜᴀʀᴀʙʟᴇ Lɪɴᴋ Oꜰ Tʜɪꜱ Fɪʟᴇ:**\n"
-            f"https://t.me/{Config.BOT_USERNAME}?start=PredatorHackerzZ_{str_to_b64(str(file_id))}",
+            f"**Fɪʟᴇꜱ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Aɴʏ Tɪᴍᴇ. Sᴏ Pʟᴇᴀꜱᴇ Fᴏʀᴡᴀʀᴅ Aɴʏ Wʜᴇʀᴇ Tᴏ Sᴀᴠᴇ Tʜᴇᴍ.\n\nHᴇʀᴇ Iꜱ Sʜᴀʀᴀʙʟᴇ Lɪɴᴋ Oꜰ Tʜɪꜱ Fɪʟᴇ.**",
             disable_web_page_preview=True, quote=True)
     except FloodWait as e:
         await asyncio.sleep(e.value)
