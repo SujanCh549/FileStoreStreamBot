@@ -16,7 +16,7 @@ async def reply_forward(message: Message, file_id: int):
 
     try:
         await message.reply_text(
-            f"**Fɪʟᴇꜱ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Aɴʏ Tɪᴍᴇ. Sᴏ Pʟᴇᴀꜱᴇ Fᴏʀᴡᴀʀᴅ Aɴʏ Wʜᴇʀᴇ Tᴏ Sᴀᴠᴇ Tʜᴇᴍ.\n\nHᴇʀᴇ Iꜱ Sʜᴀʀᴀʙʟᴇ Lɪɴᴋ Oꜰ Tʜɪꜱ Fɪʟᴇ.**",
+            f"**Fɪʟᴇꜱ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Aɴʏ Tɪᴍᴇ. Sᴏ Pʟᴇᴀꜱᴇ Fᴏʀᴡᴀʀᴅ Aɴʏ Wʜᴇʀᴇ Tᴏ Sᴀᴠᴇ Tʜᴇᴍ.**",
             disable_web_page_preview=True, quote=True)
     except FloodWait as e:
         await asyncio.sleep(e.value)
