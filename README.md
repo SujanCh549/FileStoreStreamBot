@@ -2,7 +2,7 @@
   <img src="https://graph.org/file/5ef57116d62683f872a8c.jpg" alt="ROSE BUCKET Logo">
 </p>
 <h1 align="center">
-  <b>Miss Rozy : A Permanent file Store BOT</b>
+  <b>File Store X Stream BOT</b>
 </h1>
 <p>I am the first permanent file store with Automatic thumbnail extracting + Automatic Movie Posting feature. Its all extra feature's source code is written by The LazyDeveloperr. </p>
 
